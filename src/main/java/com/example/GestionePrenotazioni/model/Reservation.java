@@ -22,13 +22,13 @@ public class Reservation {
     private Post post;
     private LocalDate check_in;
     private LocalDate check_out;
-    private boolean isAvailable;
+    private boolean active;
 
     public Reservation(User user, Post post, LocalDate check_in, LocalDate check_out, boolean isAvailable) {
         this.user = user;
         this.post = post;
         this.check_in = check_in;
         this.check_out = check_out;
-        this.isAvailable = isAvailable;
+        this.active = isAvailable;
     }
 }

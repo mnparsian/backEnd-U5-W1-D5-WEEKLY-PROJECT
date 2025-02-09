@@ -1,5 +1,6 @@
 package com.example.GestionePrenotazioni.service;
 
+import com.example.GestionePrenotazioni.enumration.PostType;
 import com.example.GestionePrenotazioni.model.Post;
 import com.example.GestionePrenotazioni.repository.PostRepository;
 import org.springframework.stereotype.Service;
@@ -30,5 +31,9 @@ public class PostService {
 
     public void deletePost(Long id) {
         postRepository.deleteById(id);
+    }
+
+    public List<Post> getPostsByCityAndType(String city, PostType type) {
+        return postRepository.findByCityAndType(city, type);
     }
 }
